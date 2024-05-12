@@ -1,0 +1,46 @@
+.input
+  box-sizing: border-box
+  border: 1px solid #d5d6d7
+  background-color: #ffffff
+  padding-left: 24px
+  padding-top: 18px
+  padding-bottom: 19px
+  padding-right: 24px
+  font-size: 14px
+  font-weight: 300
+  letter-spacing: 0.02px
+  vertical-align: top
+  font-family: $font-family
+  transition: all 0.3s ease-in-out
+  border-radius: 0
+
+  &::placeholder
+    color: $color-text
+
+  &:hover
+    border-color: #adadad
+    transition: all 0.3s ease-in-out
+    z-index: 1
+    position: relative
+
+  &:focus
+    border-color: $color-text
+    outline: none
+    transition: all 0.3s ease-in-out
+    z-index: 2
+    position: relative
+
+  &--invalid
+    border-color: #ffb80d
+    color: #ffb80d
+    transition: all 0.3s ease-in-out
+
+  &--valid
+    border-color: $color-text
+    outline: none
+    transition: all 0.3s ease-in-out
+
+  @media (min-width: $screen-md)
+    font-size: 16px
+    padding-top: 33px
+    padding-bottom: 34px

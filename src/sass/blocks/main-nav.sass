@@ -1,0 +1,63 @@
+.main-nav
+  display: none
+
+  @media (min-width: $screen-md)
+    display: block
+
+    &--hidden
+      display: none
+
+    &--visible
+      display: block  
+
+    &__list
+      display: flex
+
+
+    &__link
+      display: block
+      position: relative
+      font-size: 14px
+      color: $color-text
+      text-transform: uppercase
+      font-weight: 700
+      letter-spacing: 0.01px
+      transition: all 0.3s ease-in-out
+
+      &::before
+        width: 110%
+        height: 0
+        content: ""
+        position: absolute
+        bottom: -2px
+        left: -5px
+        background-color: $color-main
+        z-index: -1
+        transition: all 0.3s ease-in-out
+
+      &:hover
+        color: $color-main
+        transition: all 0.3s ease-in-out
+
+        &::before
+          height: 0
+
+
+    &__item
+
+      &:hover
+        & .main-nav__link
+          &::before
+            height: 0
+
+      &--active
+        & .main-nav__link
+            &::before
+              height: 12px
+              transition: all 0.3s ease-in-out
+
+      &:first-child
+        margin-right: 38px
+
+      &:nth-child(2)
+        margin-right: 42px

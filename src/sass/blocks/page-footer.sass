@@ -1,0 +1,36 @@
+.page-footer
+  padding-top: 25px
+  padding-bottom: 25px
+  background-color: #636b76
+
+  &__copy,
+  &__link
+    text-align: center
+    opacity: 0.4
+    font-size: 14px
+    font-weight: 300
+    color: #ffffff
+
+  &__copy
+    margin-bottom: 14px
+
+  &__link
+    display: block
+    transition: all 0.3s ease-in-out
+
+    &:hover,
+    &:focus
+      opacity: 1
+      transition: all 0.3s ease-in-out
+
+  @media (min-width: $screen-md)
+    padding-top: 17px
+    padding-bottom: 17px
+    
+    &__container
+      max-width: 1147px
+      display: flex
+      justify-content: space-between
+      
+    &__copy
+      margin: 0         
